@@ -5,4 +5,5 @@
     <string name="instructions">To add a task, enter the following information:</string>
     <string name="Title">My To-Do List</string>
     <string name="task_name">Task Name</string>
+    <string name="about">About</string>
 </resources>
