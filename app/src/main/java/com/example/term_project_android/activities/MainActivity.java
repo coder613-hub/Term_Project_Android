@@ -22,24 +22,22 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
 
+    private AppBarConfiguration appBarConfiguration;
     private Snackbar mSnackBar;
 
 
-  /**  @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString("GAME", mGame.getJSONStringFromThis());
-    } */
+    /**
+     * @Override protected void onSaveInstanceState(@NonNull Bundle outState) {
+     * super.onSaveInstanceState(outState);
+     * outState.putString("GAME", mGame.getJSONStringFromThis());
+     * }
+     */
 
     @Override
-    protected void onCreate (Bundle savedInstanceState)
-    {
-        super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_main);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         setupToolbar();
         setupFAB();
     }

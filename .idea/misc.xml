@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/13474/AndroidStudioProjects/TermProjectAndroid/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.2555" />
+        <entry key="..\:/Users/13474/AndroidStudioProjects/TermProjectAndroid/app/src/main/res/layout/activity_event2.xml" value="0.16145833333333334" />
         <entry key="..\:/Users/13474/AndroidStudioProjects/TermProjectAndroid/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/13474/AndroidStudioProjects/TermProjectAndroid/app/src/main/res/layout/content_event2.xml" value="0.16145833333333334" />
         <entry key="..\:/Users/13474/AndroidStudioProjects/TermProjectAndroid/app/src/main/res/layout/content_main.xml" value="0.25" />
         <entry key="..\:/Users/13474/AndroidStudioProjects/TermProjectAndroid/app/src/main/res/layout/main_include_bottom_bar_and_fab.xml" value="0.18671875" />
         <entry key="..\:/Users/13474/AndroidStudioProjects/TermProjectAndroid/app/src/main/res/layout/main_include_instruction_bar.xml" value="0.24895833333333334" />
