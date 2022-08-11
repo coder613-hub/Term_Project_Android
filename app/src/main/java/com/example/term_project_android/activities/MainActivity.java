@@ -15,15 +15,13 @@ import android.view.View;
 import androidx.appcompat.widget.Toolbar;
 import androidx.navigation.ui.AppBarConfiguration;
 
-import com.example.term_project_android.databinding.ActivityMainBinding;
-
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
 
-    private AppBarConfiguration appBarConfiguration;
+    // --Commented out by Inspection (8/10/2022 9:33 PM):private AppBarConfiguration appBarConfiguration;
     private Snackbar mSnackBar;
 
 
@@ -34,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
      * }
      */
 
+    @SuppressWarnings("JavaDoc")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
