@@ -54,10 +54,7 @@
     <EditText
         android:id="@+id/et_taskPriority"
         style="@style/task_priority" />
-    <!-- Create task button -->
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/standard_margin"
-        android:text="@string/task_create" />
+
+
+
 </LinearLayout>

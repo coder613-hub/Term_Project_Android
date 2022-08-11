@@ -10,7 +10,7 @@
     <string name="task_describe_hint">describe the task</string>
     <string name="task_due">Due Date</string>
     <string name="task_priority">Priority</string>
-    <string name="task_create">Create</string>
+    <string name="task_create">Add</string>
     <string name="about">About</string>
     <string name="task_due_hint">due date</string>
     <string name="title_activity_event">To-Do</string>
@@ -18,4 +18,5 @@
     <string name="previous">Previous</string>
     <string name="action_tasks">Task List</string>
     <string name="auto_save">Turn On Auto-Save</string>
+    <string name="clear_fields_when_add">Clear fields when task added</string>
 </resources>
