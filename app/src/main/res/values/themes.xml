@@ -1,8 +1,8 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <!--  Base application theme.  -->
     <style name="Theme.TermProjectAndroid" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
 
-        <color name="backgrounddefaultcolor">@color/secondaryLightColor</color>
         <!--  Primary brand color.  -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
@@ -16,8 +16,8 @@
         <item name="colorAccent">@color/secondaryColor</item>
 
         <!--  Status bar color.  -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSecondaryVariant</item>
-        <item name="android:navigationBarColor" tools:targetApi="l">?attr/colorSecondaryVariant</item>
+        <item name="android:statusBarColor">?attr/colorSecondaryVariant</item>
+        <item name="android:navigationBarColor">?attr/colorSecondaryVariant</item>
 
         <!--  Customize your theme here.  -->
     </style>
@@ -27,7 +27,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.TermProjectAndroid.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.TermProjectAndroid.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
 
-    <style name="Theme.TermProjectAndroid.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.TermProjectAndroid.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
 </resources>

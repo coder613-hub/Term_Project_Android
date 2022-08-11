@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Term Project Android</string>
+    <string name="app_name">Task Description</string>
     <string name="action_settings">Settings</string>
-    <string name="instructions">To add a task, enter the following information:</string>
-    <string name="Title">My To-Do List</string>
-    <string name="task_name">Task Name *</string>
+    <string name="instructions">To add a task enter the following information:</string>
+    <string name="title">My To-Do List</string>
+    <string name="task_name">Task Name</string>
     <string name="task_name_hint">task name</string>
     <string name="task_describe">Description</string>
     <string name="task_describe_hint">describe the task</string>
@@ -13,8 +14,8 @@
     <string name="about">About</string>
     <string name="task_due_hint">due date</string>
     <string name="title_activity_event">To-Do</string>
-
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
+    <string name="action_tasks">Task List</string>
+    <string name="auto_save">Turn On Auto-Save</string>
 </resources>
