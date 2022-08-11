@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
     }
 
-    @SuppressWarnings("JavaDoc")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

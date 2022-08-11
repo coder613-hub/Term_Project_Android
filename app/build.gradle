@@ -30,7 +30,12 @@ android {
         viewBinding true
     }
 }
-
+//Added on the advice of StackOverflow, and now it builds!
+configurations {
+    all {
+        exclude group: 'androidx.lifecycle', module: 'lifecycle-viewmodel-ktx'
+    }
+}
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.5.0'
