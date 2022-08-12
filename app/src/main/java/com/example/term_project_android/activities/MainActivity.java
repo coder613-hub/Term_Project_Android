@@ -21,6 +21,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         setupToolbar();
         taskList = new ArrayList<>();
         setupFAB();
@@ -166,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
 
-            case R.id.action_settings: {
+            case R.id.action_toggle_clear_fields_when_add: {
                 showSettings();
                 return true;
             }

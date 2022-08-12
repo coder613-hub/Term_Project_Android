@@ -6,4 +6,7 @@
     <dimen name="default_button_text_margin">26dp</dimen>
     <dimen name="slim_margin">4dp</dimen>
 
+    <dimen name="standard_elevation_card">8dp</dimen>
+    <dimen name="standard_corner_card">4dp</dimen>
+
 </resources>
