@@ -18,7 +18,7 @@ class TaskViewHolder extends RecyclerView.ViewHolder {
     public TaskViewHolder(@NonNull View itemView) {
         super(itemView);
         cardView = itemView.findViewById(R.id.cardView);
-        textView = itemView.findViewById(R.id.textView);
+        //textView = itemView.findViewById(R.id.textView);
     }
 
 }
