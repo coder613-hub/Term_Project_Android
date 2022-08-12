@@ -19,4 +19,8 @@
     <string name="action_tasks">Task List</string>
     <string name="auto_save">Turn On Auto-Save</string>
     <string name="clear_fields_when_add">Clear fields when task added</string>
+    <string name="card_name">Name:</string>
+    <string name="card_description">Description:</string>
+    <string name="card_duedate">Due:</string>
+    <string name="card_priority">0</string>
 </resources>
