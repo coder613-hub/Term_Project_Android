@@ -56,9 +56,7 @@ public class TaskItem {
         return dueDate;
     }
 
-    public void setDueDate(String dueDate) {
-        this.dueDate = dueDate;
-    }
+    public void setDueDate(String dueDate) {this.dueDate = dueDate;}
 
     public int getPriority() {
         return priority;

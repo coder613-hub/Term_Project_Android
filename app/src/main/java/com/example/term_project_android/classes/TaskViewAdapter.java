@@ -35,7 +35,10 @@ public class TaskViewAdapter extends RecyclerView.Adapter<TaskViewHolder> {
     }
 
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
-        holder.textView.setText(taskList.indexOf(position));
+        holder.textViewName.setText(taskList.get(position).getTaskName());
+        holder.textViewDueDate.setText(taskList.get(position).getDueDate());
+        holder.textViewDescription.setText(taskList.get(position).getDescription());
+        holder.textViewPriority.setText(taskList.get(position).getPriority());
     }
 
 

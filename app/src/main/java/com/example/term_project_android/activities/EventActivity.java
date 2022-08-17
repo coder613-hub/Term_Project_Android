@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 import com.example.term_project_android.R;
 import com.example.term_project_android.classes.TaskItem;
@@ -18,6 +20,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class EventActivity extends AppCompatActivity {
 
@@ -31,12 +34,13 @@ public class EventActivity extends AppCompatActivity {
         setUpToolbar();
         getIncomingData();
 
+
         // Create a reference to the RecyclerView in activity_main.xml
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
 
         // set number of columns to 1 or 2 for portrait or landscape respectively
         // Please note the use of an xml integer here: portrait will be 1x9 and landscape 2x5; neat!
-        final int COLUMNS = getResources ().getInteger (R.integer.rv_columns);
+        final int COLUMNS = getResources().getInteger(R.integer.rv_columns);
 
         // create and set a Grid Layout Manager to use as the Layout Manager for this RV
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, COLUMNS);
@@ -47,6 +51,21 @@ public class EventActivity extends AppCompatActivity {
         recyclerView.setAdapter(taskViewAdapter);
 
     }
+
+   /* public void addEvent(View view){
+
+        EditText timeEditText = findViewById(R.id.timeEditText);
+        EditText descriptionEditText = findViewById(R.id.descriptionEditText);
+
+        Intent intent = new Intent(getApplicationContext(), events.class);
+        String timeInfo = timeEditText.getText().toString();
+        String descriptionInfo = descriptionEditText.getText().toString();
+        intent.putExtra("time", timeInfo );
+        intent.putExtra("description", descriptionInfo);
+
+    }*/
+
+
 
 
     private void setUpToolbar() {
@@ -78,4 +97,16 @@ public class EventActivity extends AppCompatActivity {
         } else
             return super.onOptionsItemSelected(item);
     }
+
+/*    private void processAndOutputIncomingData() {
+        final String FORMAT_STRING = "%2.1f%%", N_A = "N/A";
+        int numberOfGamesPlayed = mCurrentGame.getNumberOfGamesPlayed();
+        if (!String p2WinPct = numberOfGamesPlayed == 0 ? N_A :
+                String.format(Locale.US, FORMAT_STRING, (p2Wins / (double) numberOfGamesPlayed) * 100);
+        tvDataGamesPlayed.setText(String.valueOf(numberOfGamesPlayed));     // don't forget String.valueOf()
+        tvDataPlayer1Wins.setText(String.valueOf(p1Wins));
+        tvDataPlayer2Wins.setText(String.valueOf(p2Wins));
+        tvDataPlayer1WinsPercent.setText(p1WinPct);
+        tvDataPlayer2WinsPercent.setText(p2WinPct);
+    }*/
 }
