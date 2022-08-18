@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
     private final String mKEY_LIST = "KEY";
     private final String mKeyClearOnAdd = "CLEAR_ON_ADD";
 
+    private EditText taskName, taskDescription, taskDue, taskPriority;
+
     @Override
     protected void onStop() {
         //saveToSharedPref();
@@ -71,12 +73,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        taskName = findViewById(R.id.et_taskName);
+        taskDescription = findViewById(R.id.et_taskDescription);
+        taskDue = findViewById(R.id.et_taskDue);
+        taskPriority = findViewById(R.id.et_taskPriority);
+
         setupToolbar();
         taskList = new ArrayList<>();
         setupFAB();
-        /*if (savedInstanceState != null){
-            mCurrentGame = (PMGame) savedInstanceState.get(String.valueOf(mCurrentGame));
-        }*/
+
 
     }
 
@@ -91,10 +96,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addNewTask(View view) {
-        EditText taskName = findViewById(R.id.et_taskName);
-        EditText taskDescription = findViewById(R.id.et_taskDescription);
-        EditText taskDue = findViewById(R.id.et_taskDue);
-        EditText taskPriority = findViewById(R.id.et_taskPriority);
+
 
         String strTaskName = taskName.getText().toString();
         String strTaskDescription = taskDescription.getText().toString();
@@ -112,7 +114,12 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 taskList.add(task);
                 Snackbar.make(view, "Task successfully added!", Snackbar.LENGTH_LONG).show();
-
+                    if(mPrefClearOnAdd){
+                        taskName.setText("");
+                        taskDescription.setText("");
+                        taskPriority.setText("");
+                        taskDue.setText("");
+                }
             }
         }
     }
@@ -158,6 +165,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onPrepareOptionsMenu(@NonNull Menu menu) {
+        menu.findItem(R.id.action_toggle_clear_fields_when_add).setChecked(mPrefClearOnAdd);
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
@@ -169,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case R.id.action_toggle_clear_fields_when_add: {
-                showSettings();
+                updateClearFieldsOnAdd(item);
                 return true;
             }
 
@@ -182,6 +195,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    private void updateClearFieldsOnAdd(MenuItem item) {
+        item.setChecked(!item.isChecked());
+        mPrefClearOnAdd = item.isChecked();
     }
 
     private void showTasks() {

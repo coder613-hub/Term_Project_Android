@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <color name="backgrounddefaultcolor">@color/secondaryDarkColor</color>
+        <color name="background_default_color">@color/secondaryDarkColor</color>
 
         <!-- For colored text; default is black/dark-gray (Day) or white/light-gray (Night) -->
-        <color name="primarytextcoloredcolor">@color/primaryLightColor</color>
-        <color name="secondarytextcoloredcolor">@color/primaryColor</color>
+        <color name="primary_text_colored_color">@color/primaryLightColor</color>
+        <color name="secondary_text_colored_color">@color/primaryColor</color>
 
         <!-- Matching colored background -->
-        <color name="backgroundcoloredcolor">@color/primaryDarkColor</color>
+        <color name="background_colored_color">@color/primaryDarkColor</color>
 
 </resources>

@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.term_project_android.R;
 import com.example.term_project_android.classes.TaskItem;
@@ -26,6 +27,7 @@ public class EventActivity extends AppCompatActivity {
 
     private ArrayList<TaskItem> taskList;
     private final String mKEY_LIST = "KEY";
+    private TaskViewAdapter taskViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +35,10 @@ public class EventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event);
         setUpToolbar();
         getIncomingData();
+        setupRV();
+    }
 
-
+    private void setupRV() {
         // Create a reference to the RecyclerView in activity_main.xml
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
 
@@ -47,9 +51,8 @@ public class EventActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(gridLayoutManager);
 
         // create and set an adapter to use as the Layout Manager for this RV
-        TaskViewAdapter taskViewAdapter = new TaskViewAdapter(taskList);
+        taskViewAdapter = new TaskViewAdapter(taskList);
         recyclerView.setAdapter(taskViewAdapter);
-
     }
 
    /* public void addEvent(View view){
@@ -80,6 +83,7 @@ public class EventActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String listJSON = intent.getStringExtra(mKEY_LIST);
         taskList = getListFromGSONString(listJSON);
+        Toast.makeText(this, "Number of items: " +taskList.size(), Toast.LENGTH_LONG).show();
     }
 
     public static ArrayList<TaskItem> getListFromGSONString(String strList) {
@@ -98,15 +102,4 @@ public class EventActivity extends AppCompatActivity {
             return super.onOptionsItemSelected(item);
     }
 
-/*    private void processAndOutputIncomingData() {
-        final String FORMAT_STRING = "%2.1f%%", N_A = "N/A";
-        int numberOfGamesPlayed = mCurrentGame.getNumberOfGamesPlayed();
-        if (!String p2WinPct = numberOfGamesPlayed == 0 ? N_A :
-                String.format(Locale.US, FORMAT_STRING, (p2Wins / (double) numberOfGamesPlayed) * 100);
-        tvDataGamesPlayed.setText(String.valueOf(numberOfGamesPlayed));     // don't forget String.valueOf()
-        tvDataPlayer1Wins.setText(String.valueOf(p1Wins));
-        tvDataPlayer2Wins.setText(String.valueOf(p2Wins));
-        tvDataPlayer1WinsPercent.setText(p1WinPct);
-        tvDataPlayer2WinsPercent.setText(p2WinPct);
-    }*/
 }

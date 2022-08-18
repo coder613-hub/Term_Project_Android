@@ -7,20 +7,18 @@ public class TaskItem {
     private String description;
     private String dueDate;
     private int priority;
+    private static final int DEFAULT_PRIORITY = 1;
 
     public TaskItem(String taskName, String description, String dueDate, int priority) {
         this.taskName = taskName;
         this.description = description;
         this.dueDate = dueDate;
-        this.priority = priority;
+        this.priority = priority > 0 ? priority : DEFAULT_PRIORITY;
     }
 
     //only taskName is required
     public TaskItem(String taskName) {
-        this.taskName = taskName;
-        this.description = "";
-        this.dueDate = "";
-        this.priority = 0;
+        this(taskName, "", "", DEFAULT_PRIORITY);
     }
 
     @Override
@@ -56,7 +54,9 @@ public class TaskItem {
         return dueDate;
     }
 
-    public void setDueDate(String dueDate) {this.dueDate = dueDate;}
+    public void setDueDate(String dueDate) {
+        this.dueDate = dueDate;
+    }
 
     public int getPriority() {
         return priority;
